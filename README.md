@@ -33,4 +33,10 @@ My homelab journey with enterprise-level capabilities (mistakes will be made)
 * Once I learned the basics about my server, I understood how I wanted to set it up in my open rack and properly applied the general network information through the iDRAC9 Dashboard.
 * From there, I used iDRAC9 to update my server. The process was fairly simple with iDRAC9, but I learned that I needed a DNS address like 1.1.1.1 or 8.8.8.8 to access Dell downloads through iDRAC's remote capability. The process was fairly straightforward and allowed me to learn how loud my single server can get. _Note:_ The iDRAC firmware took the longest to update and reboot.
 * _Note_: Restarting your server too many times, as I did with all of my updates, can throw your iDRAC into Recovery Mode. Here is the fix: https://www.dell.com/support/kbdoc/en-us/000136186/lifecycle-controller-update-required-lc-is-in-recovery-mode
+
+  ##Second Steps - Loading Proxmox VE
+  * I intended to use a bootable USB for loading Proxmox VE, but I learned about the ability to do it through IDRAC and the Virtual Media. I had to troubleshoot the mapping because my Lifecycle Controller booted into Recovery mode, but after I cleared that, it was a simple, easy process; I highly recommend it over going to the server and inserting a USB.
+  * Once I completed the Proxmox VE install, I hit another wall. My target disk would not allow me to install Proxmox...turns out, having a refurbished server means that sometimes your VD carries data or info from the previous owner. I had to research and learn how to check my virtual disks and physical disk, then create a new VD. All interesting concepts that Google, Claude, and Dell helped me learn about.
+  
+  
 * 
