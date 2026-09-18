@@ -43,5 +43,6 @@ My homelab journey with enterprise-level capabilities (mistakes will be made)
 * Third Steps - Updating Proxmox
 * Since I do not have the enterprise version of Proxmox VE, I needed to ensure I changed repositories so I could actually pull information.
 * Using the documentation pages, I learned about switching the package repository it pulls from for non-subscription members. https://pve.proxmox.com/wiki/Package_Repositories
-* After updating and upgrading, I created a non-admin account to work out of and then disabled direct root SSH capability to harden.
+* After updating and upgrading, I created a non-admin account to work out of and then confirmed/disabled direct root SSH capability to harden.
+*   nano /etc/ssh/sshd_config...change PermitRootLogin no _Note:_ I read something about confirming my made user account could SSH in before turning this out so I don't lock myself out. Good point to always remember. Test made accounts before turning something off for other accounts.
 * 
