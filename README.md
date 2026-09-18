@@ -37,7 +37,11 @@ My homelab journey with enterprise-level capabilities (mistakes will be made)
   ##Second Steps - Loading Proxmox VE
   * I intended to use a bootable USB for loading Proxmox VE, but I learned about the ability to do it through IDRAC and the Virtual Media. I had to troubleshoot the mapping because my Lifecycle Controller booted into Recovery mode, but after I cleared that, it was a simple, easy process; I highly recommend it over going to the server and inserting a USB.
   * Once I completed the Proxmox VE install, I hit another wall. My target disk would not allow me to install Proxmox...turns out, having a refurbished server means that sometimes your VD carries data or info from the previous owner. I had to research and learn how to check my virtual disks and physical disk, then create a new VD. All interesting concepts that Google, Claude, and Dell helped me learn about.
-  * I ran into another issue; my Micron MTFDDAV drives are not compatible with kernel 6.17+ for Proxmox VE 9.2. It looks like I am going to an older version, 8.4, until there is a fix/patch. This forum and google where my friends: https://forum.proxmox.com/threads/pve-9-1-running-on-a-boss-s1-causing-i-o-errors-and-filesystem-remounts-as-r-o.181296/
+  * I ran into another issue; my Micron MTFDDAV drives are not compatible with kernel 6.17+ for Proxmox VE 9.2. It looks like I am going to an older version, 8.4, until there is a fix/patch. This forum and Google were my friends: https://forum.proxmox.com/threads/pve-9-1-running-on-a-boss-s1-causing-i-o-errors-and-filesystem-remounts-as-r-o.181296/
   * Currently installing Proxmox VE 8.4...
   
+* Third Steps - Updating Proxmox
+* Since I do not have the enterprise version of Proxmox VE, I needed to ensure I changed repositories so I could actually pull information.
+* Using the documentation pages, I learned about switching the package repository it pulls from for non-subscription members. https://pve.proxmox.com/wiki/Package_Repositories
+* After updating and upgrading, I created a non-admin account to work out of and then disabled direct root SSH capability to harden.
 * 
