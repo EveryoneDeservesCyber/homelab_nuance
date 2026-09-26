@@ -2,7 +2,7 @@
 My homelab journey with enterprise-level capabilities (mistakes will be made)
 
 ## Executive Summary
-**Objective:** Start with learning and discovery before taking action. Focus on reading documentation, using videos, and getting to the "why" when needed. 
+**Objective:** Start with learning and discovery before taking action. Focus on reading documentation, using videos, and getting to the "why" when needed. This will be a deliberate process, as it is a personal project to build an environment where I can learn, test, and experiment in an enterprise-like setting on a personally owned server. I have experience with VMware ESXi, but I'm new to Proxmox VE...so I want to enjoy the learning journey with no real timeline.
 
 **End state:** A fully functioning server, built in isolation, that acts as my homelab. Appropriately titled "Rome".
 
@@ -45,5 +45,5 @@ My homelab journey with enterprise-level capabilities (mistakes will be made)
 * Using the documentation pages, I learned about switching the package repository it pulls from for non-subscription members. https://pve.proxmox.com/wiki/Package_Repositories
 * After updating and upgrading, I created a non-admin account to work out of and then confirmed/disabled direct root SSH capability to harden.
 *   nano /etc/ssh/sshd_config...change PermitRootLogin no
-*   _Note:_ I read something about confirming my made user account could SSH in before turning this out so I don't lock myself out. Good point to always remember. Test made accounts before turning something off for other accounts. I also learned about a PermitRootLogin prohibit-password option.
+*   _Note:_ I read something about confirming my made user account could SSH in before turning this out so I don't lock myself out. Good point to always remember. Test made accounts before turning something off for other accounts. I also learned about a PermitRootLogin prohibit-password option. In my smaller VM homelabs, I never worried about such things because I would fire and forget for single-purpose use.
 * 
