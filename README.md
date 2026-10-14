@@ -40,12 +40,15 @@ My homelab journey with enterprise-level capabilities (mistakes will be made)
   * I ran into another issue; my Micron MTFDDAV drives are not compatible with kernel 6.17+ for Proxmox VE 9.2. It looks like I am going to an older version, 8.4, until there is a fix/patch. This forum and Google were my friends: https://forum.proxmox.com/threads/pve-9-1-running-on-a-boss-s1-causing-i-o-errors-and-filesystem-remounts-as-r-o.181296/
   * Currently installing Proxmox VE 8.4...
   
-* Third Steps - Updating Proxmox
+## Third Steps - Updating Proxmox
 * Since I do not have the enterprise version of Proxmox VE, I needed to ensure I changed repositories so I could actually pull information.
 * Using the documentation pages, I learned about switching the package repository it pulls from for non-subscription members. https://pve.proxmox.com/wiki/Package_Repositories
 * After updating and upgrading, I created a non-admin account to work out of and then confirmed/disabled direct root SSH capability to harden.
 *   nano /etc/ssh/sshd_config...change PermitRootLogin no
 *   _Note:_ I read something about confirming my made user account could SSH in before turning this out so I don't lock myself out. Good point to always remember. Test made accounts before turning something off for other accounts. I also learned about a PermitRootLogin prohibit-password option. In my smaller VM homelabs, I never worried about such things because I would fire and forget for single-purpose use.
-* I've spent the last week or two assessing my cable management and setting up my UPS. While I am OCD about cables, I'm not worried about "pretty" as much as I am worried about organization.
+* I've spent the last week or two assessing my cable management and setting up my UPS. While I am OCD about cables, I'm less worried about "pretty" than about organization.
 * Did some remote SSH'ing in via a MacBook Pro 13 that I repurposed with Ubuntu LTS...running like a dream...the MAC, that is. I will probably update the Network Architecture next month after I figure out any additional systems I want to add. I am experimenting with PoE with my Raspberry Pis and building a Raspberry Pi out for Wardriving...so I need to finish up the side quest and get back to it.
 * Reading and comparing my Firewall options now. Determining if I still want to use OPNsense
+
+  ## Fourth Steps
+  * Today I loaded my first VM; with Proxmox tutorials, it was an easy process. I started with Kali Purple since I am familiar with Kali, but have seen or read information calling it a "SOC in a Box". Next, I will look at firewalls. Then I'll focus on hardening my firewall before I spin up any VMs.
