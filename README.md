@@ -50,5 +50,5 @@ My homelab journey with enterprise-level capabilities (mistakes will be made)
 * Did some remote SSH'ing in via a MacBook Pro 13 that I repurposed with Ubuntu LTS...running like a dream...the MAC, that is. I will probably update the Network Architecture next month after I figure out any additional systems I want to add. I am experimenting with PoE with my Raspberry Pis and building a Raspberry Pi out for Wardriving...so I need to finish up the side quest and get back to it.
 * Reading and comparing my Firewall options now. Determining if I still want to use OPNsense.
 
-  ## Fourth Steps
+## Fourth Steps
   * Today I loaded my first VM; with Proxmox tutorials, it was an easy process. I started with Kali Purple since I am familiar with Kali, but have seen or read information calling it a "SOC in a Box". Next, I will look at firewalls. Then I'll focus on hardening my firewall before I spin up any VMs.
